@@ -26,6 +26,7 @@ impl Server {
                             // create Request from buffer using try_from (see src/http/request.rs)
                             match Request::try_from(&buffer[..]) {
                                 Ok(request) => {
+                                    dbg!(request);
                                 },
                                 Err(e) => println!("Failed to parse a request: {}", e),
                             }
